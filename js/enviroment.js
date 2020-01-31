@@ -1,19 +1,30 @@
 if (env == "production") {
-  document.open();
-  document.write(
-    '<title>PRODUCTION</title><meta property="og:type" content="website" /><meta property="og:site_name" content="prod" /><meta property="og:title" content="prod" /><meta property="og:description" content="JavaScriptでのOGPの出し分け確認環境" /><meta property="og:url" content="https://prod.cpdev.jp/" /><meta property="og:image" content="https://prod.cpdev.jp/img/ogp.png" /><meta property="og:locale" content="ja_JP" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="prod" /><meta name="twitter:description" content="OGPの出し分け確認 本番" />'
-  );
-  document.close();
+  //   console.log("本番");
+  var rootPath = "https://production.cpdev.jp";
 }
 if (env == "staging") {
-  console.log("検証");
+  //   console.log("検証");
+  var rootPath = "https://staging.cpdev.jp";
 }
 if (env == "develop") {
-  document.open();
-  document.write(
-    '<title>DEVELOP</title><meta property="og:type" content="website" /><meta property="og:site_name" content="develop" /><meta property="og:title" content="develop" /><meta property="og:description" content="JavaScriptでのOGPの出し分け確認環境" /><meta property="og:url" content="https://develop.cpdev.jp/" /><meta property="og:image" content="https://develop.cpdev.jp/img/ogp.png" /><meta property="og:locale" content="ja_JP" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="develop" /><meta name="twitter:description" content="OGPの出し分け確認 開発" />'
-  );
-  document.close();
+  //   console.log("開発");
+  var rootPath = "https://develop.cpdev.jp/";
 }
 
-function envMeta() {}
+const metaDiscre = document.head.children;
+const metaLength = metaDiscre.length;
+for (var i = 0; i < metaLength; i++) {
+  var proper = metaDiscre[i].getAttribute("name");
+  if (proper === "description") {
+    const dis = metaDiscre[i];
+    dis.setAttribute("content", rootPath);
+    console.log(dis);
+  }
+  var proper = metaDiscre[i].getAttribute("property");
+  if (proper === "og:image") {
+    var dir = metaDiscre[i].getAttribute("content");
+    const dis = metaDiscre[i];
+    dis.setAttribute("content", rootPath + dir);
+    console.log(dis);
+  }
+}
