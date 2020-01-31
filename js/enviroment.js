@@ -8,7 +8,7 @@ if (env == "staging") {
 }
 if (env == "develop") {
   //   console.log("開発");
-  var rootPath = "https://develop.cpdev.jp/";
+  var rootPath = "https://develop.cpdev.jp";
 }
 
 const metaDiscre = document.head.children;
