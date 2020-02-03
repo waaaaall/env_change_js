@@ -1,16 +1,14 @@
 if (env == "production") {
-  console.log("本番");
-  envMeta();
+  var rootPath = "https://production.cpdev.jp";
 }
 if (env == "staging") {
   console.log("検証");
+  var rootPath = "https://staging.cpdev.jp";
 }
 if (env == "develop") {
   console.log("開発");
+  var rootPath = "https://develop.cpdev.jp";
 }
 
-function envMeta() {
-  document.open();
-  document.write("<title>ほないくで</title>");
-  document.close();
-}
+let proper = ["og:url", "og:image"];
+envChange(rootPath, proper);
