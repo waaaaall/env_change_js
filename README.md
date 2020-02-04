@@ -75,10 +75,9 @@ let proper = ["og:url", "og:image"];
 <meta property="og:image" content="/img/ogp.png" />
 ```
 
-この状態で実際にブラウザから`index.html`を開くと
-![image](https://user-images.githubusercontent.com/38094162/73723127-aabff100-476b-11ea-89c8-0eef2a0ca7d9.png)
+この状態で実際にブラウザから開き,meta タグが開発環境のパスに書き換えられていることを確認する
 
-meta タグが書き換えられていることが確認できる
+![image](https://user-images.githubusercontent.com/38094162/73723127-aabff100-476b-11ea-89c8-0eef2a0ca7d9.png)
 
 ### クローン時
 
@@ -103,8 +102,6 @@ const env = "production";
 // const env = "develop";
 ```
 
-ブラウザから index.html を開いて確認する
+ブラウザから index.html を開き、meta タグが本番環境のパスに変わっていることを確認する
 
 ![image](https://user-images.githubusercontent.com/38094162/73723976-a5fc3c80-476d-11ea-96b2-a513732e84cb.png)
-
-meta タグが本番環境のパスに変わっていることを確認する
