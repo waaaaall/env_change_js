@@ -77,6 +77,7 @@ let proper = ["og:url", "og:image"];
 
 この状態で実際にブラウザから`index.html`を開くと
 ![image](https://user-images.githubusercontent.com/38094162/73723127-aabff100-476b-11ea-89c8-0eef2a0ca7d9.png)
+
 meta タグが書き換えられていることが確認できる
 
 ### クローン時
@@ -104,4 +105,5 @@ const env = "production";
 
 ブラウザから index.html を開いて確認する
 ![image](https://user-images.githubusercontent.com/38094162/73723976-a5fc3c80-476d-11ea-96b2-a513732e84cb.png)
+
 meta タグが本番環境のパスに変わっていることを確認する
