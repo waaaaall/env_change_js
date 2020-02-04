@@ -1,13 +1,10 @@
+// 環境毎のパスを記述
 if (env == "production") {
-  rootPath = "https://production.cpdev.jp";
-}
-if (env == "staging") {
-  console.log("検証");
-  rootPath = "https://staging.cpdev.jp";
+  rootPath = "https://production.example.com";
 }
 if (env == "develop") {
   console.log("開発");
-  rootPath = "https://develop.cpdev.jp";
+  rootPath = "https://develop.example.com";
 }
 
 // 環境に左右されるプロパティを配列に入れる
