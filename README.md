@@ -104,6 +104,7 @@ const env = "production";
 ```
 
 ブラウザから index.html を開いて確認する
+
 ![image](https://user-images.githubusercontent.com/38094162/73723976-a5fc3c80-476d-11ea-96b2-a513732e84cb.png)
 
 meta タグが本番環境のパスに変わっていることを確認する
